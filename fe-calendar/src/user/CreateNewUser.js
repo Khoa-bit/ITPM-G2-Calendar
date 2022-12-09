@@ -134,7 +134,7 @@ const CreateNewUser = () => {
                                     rules={[
                                         {
                                             required: true,
-                                            message: 'Please input your title!',
+                                            message: 'Please input your password!',
                                         }
                                     ]}
                                     onChange={(e) => setPassword(e.target.value)}
