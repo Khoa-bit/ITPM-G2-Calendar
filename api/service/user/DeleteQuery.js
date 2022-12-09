@@ -11,7 +11,7 @@ exports.deleteUser_invitations = (email) => {
         `DELETE FROM
             invitation 
         WHERE
-            eventid IN ( SELECT eventid FROM event WHERE hostemail = '${email}' );`;
+            eventid IN ( SELECT eventid FROM invitation WHERE guestemail = '${email}' );`;
     return query;
 }
 
