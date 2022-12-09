@@ -104,7 +104,7 @@ exports.readEventsByEmail = (email, keySearch) => {
             event
         WHERE
             hostemail = '${email}'
-			AND title LIKE '%${keySearch}%'`;
+			AND LOWER(title) LIKE '%${keySearch}%'`;
 	//console.log(query);
     return query;
 }
@@ -200,7 +200,7 @@ exports.readPendingInvitationsByEmail = (email, keySearch) => {
         WHERE
             invitation.guestemail = '${email}'
             AND status = 'pending'
-			AND title LIKE '%${keySearch}%';`;
+			AND LOWER(title) LIKE '%${keySearch}%';`;
     return query;
 }
 
@@ -239,6 +239,6 @@ exports.readInvitationsByEmail = (email, keySearch) => {
         WHERE
             invitation.guestemail = '${email}'
             AND status = 'accepted'
-			AND title LIKE '%${keySearch}%';`;
+			AND LOWER(title) LIKE '%${keySearch}%';`;
     return query;
 }

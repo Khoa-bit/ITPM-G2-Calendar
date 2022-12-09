@@ -59,7 +59,7 @@ function InvitationPending(route) {
 
     // Function will active if user type in the search bar
     const onSearch = (value) => {
-        setKeySearch(value);
+        setKeySearch(value.toLowerCase());
     }
 
     useEffect(() => {
