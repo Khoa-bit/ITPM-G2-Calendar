@@ -114,9 +114,9 @@ const EditEvent = () => {
     const handleSubmit = (event) => {
         // Format starttime, endtime before submit
         let startDateAndTime = starttime.split("T");
-        let formattedStarttime = startDateAndTime[0] + ' ' + startDateAndTime[1] + ':00+07';
+        let formattedStarttime = startDateAndTime[0] + ' ' + startDateAndTime[1] + ':00';
         let endDateAndTime = endtime.split("T");
-        let formattedEndtime = endDateAndTime[0] + ' ' + endDateAndTime[1] + ':00+07';
+        let formattedEndtime = endDateAndTime[0] + ' ' + endDateAndTime[1] + ':00';
 
         axios.put(`http://localhost:9000/event`, {
             eventid: eventid,

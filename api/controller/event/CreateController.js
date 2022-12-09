@@ -6,9 +6,9 @@ const eventIdGenerator = require('./../../service/event/EventIdGenerator.js');
 exports.createEvent = async (req, res) => {
 
     let startDateAndTime = req.body.starttime.split("T");
-    let starttime = startDateAndTime[0] + ' ' + startDateAndTime[1] + ':00+07';
+    let starttime = startDateAndTime[0] + ' ' + startDateAndTime[1] + ':00';
     let endDateAndTime = req.body.endtime.split("T");
-    let endtime = endDateAndTime[0] + ' ' + endDateAndTime[1] + ':00+07';
+    let endtime = endDateAndTime[0] + ' ' + endDateAndTime[1] + ':00';
 
 
     if (req.body.hostemail == '' || req.body.title == '' || 
